@@ -8,6 +8,7 @@ Training Data
 The training_data zip file contains four .pt files:
 
 Q_random_200.pt
+
 200 random initial lattice configurations
 
 force_random_200.pt
