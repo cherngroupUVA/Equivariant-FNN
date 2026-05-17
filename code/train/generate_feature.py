@@ -1,6 +1,5 @@
 """ Analysis functions for generate irreducible representations bond """
 import torch
-#import constant
 import math
 
 torch.set_printoptions(linewidth=200, precision=3)
