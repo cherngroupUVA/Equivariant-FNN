@@ -88,104 +88,91 @@ class Net(torch.nn.Module):
         #nn.init.xavier_uniform_(self.E_4.weight, nn.init.calculate_gain('sigmoid'))
         
         strv = 1. / math.sqrt(num_A1[0])
-        bias_value_A10 = (-2 * strv) * torch.rand(lattice_num,sizes_A1[1]) + strv
+        bias_value_A10 = (-2 * strv) * torch.rand(sizes_A1[1]) + strv
         self.A1_0_bias = torch.nn.Parameter(bias_value_A10)
         
         strv = 1. / math.sqrt(num_A1[1])
-        bias_value_A11 = (-2 * strv) * torch.rand(lattice_num,sizes_A1[2]) + strv
+        bias_value_A11 = (-2 * strv) * torch.rand(sizes_A1[2]) + strv
         self.A1_1_bias = torch.nn.Parameter(bias_value_A11)
         
         strv = 1. / math.sqrt(num_A1[2])
-        bias_value_A12 = (-2 * strv) * torch.rand(lattice_num,sizes_A1[3]) + strv
+        bias_value_A12 = (-2 * strv) * torch.rand(sizes_A1[3]) + strv
         self.A1_2_bias = torch.nn.Parameter(bias_value_A12)
         
         strv = 1. / math.sqrt(num_A1[3])
-        bias_value_A13 = (-2 * strv) * torch.rand(lattice_num,sizes_A1[4]) + strv
+        bias_value_A13 = (-2 * strv) * torch.rand(sizes_A1[4]) + strv
         self.A1_3_bias = torch.nn.Parameter(bias_value_A13)
         
-        #strv = 1. / math.sqrt(num_A1[4])
-        #bias_value_A14 = (-2 * strv) * torch.rand(lattice_num,sizes_A1[5]) + strv
-        #self.A1_4_bias = torch.nn.Parameter(bias_value_A14)
+        
         
         strv = 1. / math.sqrt(num_A2[0])
-        bias_value_A20 = (-2 * strv) * torch.rand(lattice_num,sizes_A2[1]) + strv
+        bias_value_A20 = (-2 * strv) * torch.rand(sizes_A2[1]) + strv
         self.A2_0_bias = torch.nn.Parameter(bias_value_A20)
         
         strv = 1. / math.sqrt(num_A2[1])
-        bias_value_A21 = (-2 * strv) * torch.rand(lattice_num,sizes_A2[2]) + strv
+        bias_value_A21 = (-2 * strv) * torch.rand(sizes_A2[2]) + strv
         self.A2_1_bias = torch.nn.Parameter(bias_value_A21)
         
         strv = 1. / math.sqrt(num_A2[2])
-        bias_value_A22 = (-2 * strv) * torch.rand(lattice_num,sizes_A2[3]) + strv
+        bias_value_A22 = (-2 * strv) * torch.rand(sizes_A2[3]) + strv
         self.A2_2_bias = torch.nn.Parameter(bias_value_A22)
         
         strv = 1. / math.sqrt(num_A2[3])
-        bias_value_A23 = (-2 * strv) * torch.rand(lattice_num,sizes_A2[4]) + strv
+        bias_value_A23 = (-2 * strv) * torch.rand(sizes_A2[4]) + strv
         self.A2_3_bias = torch.nn.Parameter(bias_value_A23)
         
-        #strv = 1. / math.sqrt(num_A2[4])
-        #bias_value_A24 = (-2 * strv) * torch.rand(lattice_num,sizes_A2[5]) + strv
-        #self.A2_4_bias = torch.nn.Parameter(bias_value_A24)
         
         strv = 1. / math.sqrt(num_B1[0])
-        bias_value_B10 = (-2 * strv) * torch.rand(lattice_num, sizes_B1[1]) + strv
+        bias_value_B10 = (-2 * strv) * torch.rand(sizes_B1[1]) + strv
         self.B1_0_bias = torch.nn.Parameter(bias_value_B10)
         
         strv = 1. / math.sqrt(num_B1[1])
-        bias_value_B11 = (-2 * strv) * torch.rand(lattice_num,sizes_B1[2]) + strv
+        bias_value_B11 = (-2 * strv) * torch.rand(sizes_B1[2]) + strv
         self.B1_1_bias = torch.nn.Parameter(bias_value_B11)
         
         strv = 1. / math.sqrt(num_B1[2])
-        bias_value_B12 = (-2 * strv) * torch.rand(lattice_num,sizes_B1[3]) + strv
+        bias_value_B12 = (-2 * strv) * torch.rand(sizes_B1[3]) + strv
         self.B1_2_bias = torch.nn.Parameter(bias_value_B12)
         
         strv = 1. / math.sqrt(num_B1[3])
-        bias_value_B13 = (-2 * strv) * torch.rand(lattice_num,sizes_B1[4]) + strv
+        bias_value_B13 = (-2 * strv) * torch.rand(sizes_B1[4]) + strv
         self.B1_3_bias = torch.nn.Parameter(bias_value_B13)
         
-        #strv = 1. / math.sqrt(num_B1[4])
-        #bias_value_B14 = (-2 * strv) * torch.rand(lattice_num,sizes_B1[5]) + strv
-        #self.B1_4_bias = torch.nn.Parameter(bias_value_B14)
-        
+       
         strv = 1. / math.sqrt(num_B2[0])
-        bias_value_B20 = (-2 * strv) * torch.rand(lattice_num, sizes_B2[1]) + strv
+        bias_value_B20 = (-2 * strv) * torch.rand(sizes_B2[1]) + strv
         self.B2_0_bias = torch.nn.Parameter(bias_value_B20)
         
         strv = 1. / math.sqrt(num_B2[1])
-        bias_value_B21 = (-2 * strv) * torch.rand(lattice_num, sizes_B2[2]) + strv
+        bias_value_B21 = (-2 * strv) * torch.rand(sizes_B2[2]) + strv
         self.B2_1_bias = torch.nn.Parameter(bias_value_B21)
         
         strv = 1. / math.sqrt(num_B2[2])
-        bias_value_B22 = (-2 * strv) * torch.rand(lattice_num, sizes_B2[3]) + strv
+        bias_value_B22 = (-2 * strv) * torch.rand(sizes_B2[3]) + strv
         self.B2_2_bias = torch.nn.Parameter(bias_value_B22)
         
         strv = 1. / math.sqrt(num_B2[3])
-        bias_value_B23 = (-2 * strv) * torch.rand(lattice_num, sizes_B2[4]) + strv
+        bias_value_B23 = (-2 * strv) * torch.rand(sizes_B2[4]) + strv
         self.B2_3_bias = torch.nn.Parameter(bias_value_B23)
         
-        #strv = 1. / math.sqrt(num_B2[4])
-        #bias_value_B24 = (-2 * strv) * torch.rand(lattice_num, sizes_B2[5]) + strv
-        #self.B2_4_bias = torch.nn.Parameter(bias_value_B24)
+        
         
         strv = 1. / math.sqrt(num_E[0])
-        bias_value_E0 = (-2 * strv) * torch.rand(lattice_num, sizes_E[1]) + strv
+        bias_value_E0 = (-2 * strv) * torch.rand(sizes_E[1]) + strv
         self.E_0_bias = torch.nn.Parameter(bias_value_E0)
         
         strv = 1. / math.sqrt(num_E[1])
-        bias_value_E1 = (-2 * strv) * torch.rand(lattice_num, sizes_E[2]) + strv
+        bias_value_E1 = (-2 * strv) * torch.rand(sizes_E[2]) + strv
         self.E_1_bias = torch.nn.Parameter(bias_value_E1)
         
         strv = 1. / math.sqrt(num_E[2])
-        bias_value_E2 = (-2 * strv) * torch.rand(lattice_num, sizes_E[3]) + strv
+        bias_value_E2 = (-2 * strv) * torch.rand(sizes_E[3]) + strv
         self.E_2_bias = torch.nn.Parameter(bias_value_E2)
         
         strv = 1. / math.sqrt(num_E[3])
-        bias_value_E3 = (-2 * strv) * torch.rand(lattice_num, sizes_E[4]) + strv
+        bias_value_E3 = (-2 * strv) * torch.rand(sizes_E[4]) + strv
         self.E_3_bias = torch.nn.Parameter(bias_value_E3)
         
-        #strv = 1. / math.sqrt(num_E[4])
-        #bias_value_E4 = (-2 * strv) * torch.rand(lattice_num, sizes_E[5]) + strv
-        #self.E_4_bias = torch.nn.Parameter(bias_value_E4)
         
         
         
