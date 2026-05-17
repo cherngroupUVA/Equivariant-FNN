@@ -37,7 +37,7 @@ def read_neighbor_list(file_name, ramp, Lsize):
 
             count += 1
     
-    #print(neighbor_2d)
+    
 
     neighbor_type = torch.zeros(ramp + 1, dtype=torch.int).to(device)
 

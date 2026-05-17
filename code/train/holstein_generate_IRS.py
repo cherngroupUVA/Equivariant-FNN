@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov  8 19:37:08 2023
+
 This script used to generate the IRs features from neighbor representation
-@author: 14026
+
 """
 
 import torch
